@@ -10,8 +10,8 @@
 
 clear; close all; clc
 
-subj_code  = 'BEL_S01';
-proc_path  = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/BEL_S01/processed/';
+subj_code  = 
+proc_path  = 
 
 hjorth_centre     = 'C3';
 hjorth_neighbours = {'FC1', 'CP1', 'FC5', 'CP5'};
@@ -23,14 +23,11 @@ n_overlap         = round(win_len / 2);
 n_fft             = 2^nextpow2(win_len * 2);
 max_cog_peak_diff = 1;
 
-ft_path = '/Users/e.w.m.dresens/Documents/MATLAB/fieldtrip-20250106/';
+ft_path = 
 addpath(ft_path); ft_defaults;
 
 fprintf('\n=== STEP 1: Loading preprocessed data ===\n');
 load_path = fullfile(proc_path, [subj_code '_RS_clean.mat']);
-if ~exist(load_path, 'file')
-    error('File not found: %s\nRun T4TE_RS_preprocessing_BEL_S01.m first.', load_path);
-end
 load(load_path, 'data_clean');
 n_epochs = numel(data_clean.trial);
 n_samp   = size(data_clean.trial{1}, 2);
