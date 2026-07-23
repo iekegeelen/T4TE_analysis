@@ -29,7 +29,7 @@
 % Dependencies: shadedErrorBar.m, TEP_peak.m, custum_topoplot.m,
 %               dcc_customized_acticap64.mat, EEGLAB, FieldTrip
 %
-% Author: Ieke Dresens — T4TE internship, CIMeC Trento, 2025/2026
+% 
 % =========================================================================
 
 
@@ -39,10 +39,10 @@
 % PATHS — edit once
 % =========================================================================
 
-proc_path   = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/';
-eeglab_path = '/Users/e.w.m.dresens/Documents/MATLAB/eeglab2026.0.0/';
-ft_path     = '/Users/e.w.m.dresens/Documents/MATLAB/fieldtrip-20250106/';
-tools_path  = '/Users/e.w.m.dresens/Documents/MATLAB/';
+proc_path   = 
+eeglab_path = 
+ft_path     = 
+tools_path  = 
 
 addpath(eeglab_path);
 addpath(ft_path);
@@ -57,8 +57,7 @@ if ~exist(group_path, 'dir'); mkdir(group_path); end
 % SETTINGS
 % =========================================================================
 
-subj_list = {'BEL_S01','BEL_S02','BEL_S03','BEL_S04','BEL_S05','BEL_S06', ...
-             'BEL_S07','BEL_S08','BEL_S09','BEL_S10','BEL_S11','BEL_S12'};
+subj_list = {};
 n_sub = numel(subj_list);
 
 trig_vals   = [1, 3];
