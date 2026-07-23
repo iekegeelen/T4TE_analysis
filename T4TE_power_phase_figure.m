@@ -16,9 +16,7 @@
 %   - Shows whether phase effect is power-dependent
 %
 % Input: BEL_S0X_prestim_power.mat per subject (from T4TE_prestim_power.m)
-%
-% Author:  E.W.M. Dresens
-% Date:    June 2026
+
 % =========================================================================
 
 clear; close all; clc
