@@ -16,12 +16,11 @@
 %   T4TE_TEP_dotplot_supra_v5.png
 %   T4TE_TEP_dotplot_sub_v5.png
 %
-% Author:  E.W.M. Dresens | June 2026
 % =========================================================================
 
 clear; close all; clc
 
-base_path = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/';
+base_path = '';
 fig_dir   = fullfile(base_path, 'TEP_figures');
 if ~exist(fig_dir, 'dir'); mkdir(fig_dir); end
 
