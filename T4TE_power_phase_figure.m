@@ -26,10 +26,8 @@ clear; close all; clc
 % =========================================================================
 %% SETTINGS
 % =========================================================================
-base_path = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/';
-addpath('/Users/e.w.m.dresens/Documents/MATLAB/DrosteEffect-BrewerMap-b373eab/');
-subjects = {'BEL_S01','BEL_S02','BEL_S03','BEL_S04','BEL_S05','BEL_S06',...
-            'BEL_S07','BEL_S08','BEL_S09','BEL_S10','BEL_S11','BEL_S12'};
+base_path = 
+subjects = 
 
 % Phase bin definitions (radians)
 trough_centre = -pi;
