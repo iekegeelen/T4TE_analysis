@@ -17,21 +17,6 @@
 %        — trial-level phase x MEP correlation without binning
 %        — group-level Wilcoxon signed-rank test on per-subject r-values
 %
-% Dual-band rationale:
-%   The IAF run uses a subject-specific filter centred on the individual
-%   alpha frequency (CoG from resting-state EEG), which is physiologically
-%   more accurate. The fixed 8-13 Hz run provides a directly comparable
-%   conventional reference. Both runs use identical trial sets and phase
-%   extraction logic; only the FIR bandpass filter differs.
-%
-% v6 additions:
-%   Circular-linear correlation (circ_corrcl from CircStat toolbox, Berens 2009)
-%   is computed per subject on the full trial-by-trial phase x MEP z-score
-%   relationship. This avoids the information loss inherent in discretising
-%   phase into two bins and is more powerful for small group N. At the group
-%   level, per-subject r-values are tested against zero using a one-sided
-%   Wilcoxon signed-rank test (expected direction: positive r, i.e. higher
-%   MEP at trough phase). Requires CircStat toolbox on the MATLAB path.
 %
 % Outputs:
 %   T4TE_phase_MEP_results_v7_IAF.mat   — results struct, IAF run
@@ -47,10 +32,10 @@ clc; clear all; close all;
 %% -------------------------------------------------------------------------
 %  TOOLBOX PATHS — edit once per machine
 % -------------------------------------------------------------------------
-ft_path         = '/Users/e.w.m.dresens/Documents/MATLAB/fieldtrip-20250106/';
-eeglab_path     = '/Users/e.w.m.dresens/Documents/MATLAB/eeglab2026.0.0/';
-phastimate_path = '/Users/e.w.m.dresens/Documents/MATLAB/';
-circstat_path   ='/Users/e.w.m.dresens/Documents/MATLAB/CircStat2012a/';   % Berens 2009
+ft_path         = 
+eeglab_path     = 
+phastimate_path = 
+circstat_path   =
 
 addpath(ft_path);   ft_defaults;
 addpath(eeglab_path);   eeglab nogui;
@@ -68,10 +53,9 @@ end
 %% -------------------------------------------------------------------------
 %  PARAMETERS
 % -------------------------------------------------------------------------
-base_path = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/';
+base_path = 
 
-subjects = {'BEL_S01','BEL_S02','BEL_S03','BEL_S04','BEL_S05','BEL_S06',...
-            'BEL_S07','BEL_S08','BEL_S09','BEL_S10','BEL_S11','BEL_S12'};
+subjects = {};
 
 eeg_channel       = 'C3';
 hjorth_neighbours = {'FC1','CP1','FC5','CP5'};
