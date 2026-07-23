@@ -1,21 +1,15 @@
 % =========================================================================
-% T4TE Study - Resting State EEG Preprocessing — BEL_S01
+% T4TE Study - Resting State EEG Preprocessing 
 % =========================================================================
-% Bad channels from TMS-EEG log (BEL_S01_prepro_log.txt):
-%   Removed: Fpz, Oz, T7, T8
 
-%
-% Input:   BEL01-270426-RS-PRE.vhdr/.eeg/.vmrk
-% Output:  BEL_S01_RS_clean.mat
-%          BEL_S01_RS_prepro_log.mat / .txt
 % =========================================================================
 
 clear; close all; clc
 
-subj_code  = 'BEL_S01';
-raw_file   = 'BEL01-270426-RS-PRE';
-raw_path   = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/BEL_S01/raw/';
-proc_path  = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/BEL_S01/processed/';
+subj_code  = 
+raw_file   = 
+raw_path   = 
+proc_path  = 
 
 emg_chans  = {'APB', 'FDI', 'EDC'};
 bad_chans  = {'Fpz', 'Oz', 'T7', 'T8'};
@@ -25,8 +19,8 @@ target_fs    = 500;
 bandpass_hz  = [1 45];
 epoch_len_s  = 2;
 
-ft_path     = '/Users/e.w.m.dresens/Documents/MATLAB/fieldtrip-20250106/';
-eeglab_path = '/Users/e.w.m.dresens/Documents/MATLAB/eeglab2026.0.0/';
+ft_path     = 
+eeglab_path = 
 
 addpath(ft_path); ft_defaults;
 addpath(eeglab_path); eeglab nogui;
