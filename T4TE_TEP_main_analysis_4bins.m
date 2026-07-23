@@ -34,7 +34,6 @@
 % Requires: MATLAB Statistics and Machine Learning Toolbox (fitrm, ranova,
 %           multcompare) and CircStat toolbox (circ_corrcl).
 %
-% Author:  E.W.M. Dresens
 % Date:    June 2026
 % =========================================================================
 
@@ -43,13 +42,13 @@ clear; close all; clc
 %% -------------------------------------------------------------------------
 %  TOOLBOX PATHS
 % -------------------------------------------------------------------------
-circstat_path = '/Users/e.w.m.dresens/Documents/MATLAB/CircStat2012a/';
+circstat_path = 
 addpath(circstat_path);
 
 %% -------------------------------------------------------------------------
 %  PATHS
 % -------------------------------------------------------------------------
-base_path = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/';
+base_path = 
 fig_dir   = fullfile(base_path, 'TEP_figures');
 if ~exist(fig_dir, 'dir'); mkdir(fig_dir); end
 
