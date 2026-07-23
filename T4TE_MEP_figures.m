@@ -13,7 +13,7 @@
 %   - Circular-linear correlation (all subjects + group)
 %   - All 6 pairwise t-tests with Bonferroni correction (alpha = 0.0083)
 %
-% Author: E.W.M. Dresens | June 2026
+%
 % =========================================================================
 
 clear; close all; clc
@@ -21,8 +21,8 @@ clear; close all; clc
 % =========================================================================
 %% SETTINGS
 % =========================================================================
-base_path = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/';
-out_dir   = fullfile(base_path, 'MEP_figures');
+base_path = 
+out_dir   =
 if ~exist(out_dir,'dir'); mkdir(out_dir); end
 
 % Colours — one per quadrant
