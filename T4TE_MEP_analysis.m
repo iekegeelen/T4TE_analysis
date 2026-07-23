@@ -1,15 +1,7 @@
-%% T4TE_MEP_analysis_BEL_S01.m
+%% T4TE_MEP_analysis.m
 % MEP computation and interactive trial-by-trial validation
 % Adapted from Elena Mongiardini's MEP_validation.m for the T4TE study
 %
-% v2 changes vs v1:
-%   - EEG rejection mask: trials removed during visual inspection (Step 5)
-%     in the preprocessing pipeline are automatically set to NaN before
-%     interactive validation, so MEP and TEP analyses are always based on
-%     the same trial set.
-%   - BEL_S02 flag: option to additionally exclude aborted suprathreshold
-%     trials (cable failure) from the EMG trial numbering.
-%   - Summary statistics split by rejection source (EEG vs MEP-quality).
 %
 % INPUT:  <subj_code>_emg.mat         — FieldTrip EMG struct (all original trials,
 %                                        saved at Step 3 of preprocessing pipeline)
@@ -43,8 +35,8 @@ clc; clear all; close all;
 %% -------------------------------------------------------------------------
 %  PARAMETERS — edit these for each subject
 % -------------------------------------------------------------------------
-subj_code  = 'BEL_S01';
-proc_path  = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/BEL_S01/processed/';
+subj_code  = 
+proc_path  = 
 
 emg_channel = 'FDI';   % primary MEP channel; alternatives: 'APB', 'EDC'
 
@@ -58,15 +50,6 @@ baseline_win_ms = -10;   % use everything before -10 ms
 cond_codes  = [1, 3];
 cond_labels = {'subthreshold', 'suprathreshold'};
 
-% -------------------------------------------------------------------------
-% BEL_S02 ONLY: aborted suprathreshold trials due to cable failure.
-% These were removed AFTER data_emg was saved, so they must be excluded
-% manually here. Set to true for BEL_S02, leave false for all others.
-% n_aborted: number of aborted trials at the START of the suprathreshold
-% block (they appear first in the trial sequence for that condition).
-% -------------------------------------------------------------------------
-remove_aborted_supra = false;   % BEL_S01: no aborted trials
-n_aborted            = 0;
 
 % =========================================================================
 
