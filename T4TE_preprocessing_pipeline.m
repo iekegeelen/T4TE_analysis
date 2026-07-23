@@ -36,10 +36,10 @@ clear; close all; clc
 % SETTINGS — edit per participant
 % =========================================================================
 
-subj_code  = 'BEL_S01';
-raw_file   = 'BEL01-270426-EXP.vhdr';
-raw_path   = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/BEL_S01/raw/';
-proc_path  = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/BEL_S01/processed/';
+subj_code  = 
+raw_file   = 
+raw_path   = 
+proc_path  = 
 
 trig_sub   = 'S  1';   % 90%  rMT (subthreshold)
 trig_supra = 'S  3';   % 110% rMT (suprathreshold)
