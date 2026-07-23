@@ -33,8 +33,8 @@ clear; close all; clc
 % =========================================================================
 %% SETTINGS — change subj per run
 % =========================================================================
-subj      = 'BEL_S05';
-base_path = '/Users/e.w.m.dresens/Documents/master/Internship_Paolo/T4TE/data/';
+subj      = ;
+base_path = ;
 
 % Hjorth-Laplacian (identical to v7)
 eeg_channel       = 'C3';
@@ -50,8 +50,8 @@ fixed_band = [8, 13];
 % =========================================================================
 %% TOOLBOXES
 % =========================================================================
-ft_path     = '/Users/e.w.m.dresens/Documents/MATLAB/fieldtrip-20250106/';
-eeglab_path = '/Users/e.w.m.dresens/Documents/MATLAB/eeglab2026.0.0/';
+ft_path     = '';
+eeglab_path = '';
 addpath(ft_path); ft_defaults;
 addpath(eeglab_path); eeglab nogui;
 
