@@ -24,7 +24,6 @@
 %   T4TE_phase_MEP_comparison_v6.mat    — both results in one file
 %   Figures saved per band in base_path
 %
-% Ieke | T4TE study | CIMeC, Trento | 2026
 % =========================================================================
 
 clc; clear all; close all;
