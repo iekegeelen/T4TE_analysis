@@ -1,8 +1,8 @@
 % =========================================================================
 % T4TE Study - IAF Estimation — BEL_S01
 % =========================================================================
-% Input:   BEL_S01_RS_clean.mat
-% Output:  BEL_S01_IAF_results.mat + BEL_S01_IAF_PSD.png
+% Input:   .mat
+% Output:  _IAF_results.mat + _IAF_PSD.png
 %
 % Method:  Centre-of-gravity (CoG) in 8-13 Hz
 %          Hjorth-Laplacian on C3 (FC1, CP1, FC5, CP5)
